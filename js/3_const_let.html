@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试let</title>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <p id="output"></p>
+    
+    <script>
+        var buttons=document.querySelectorAll("button");
+        var p=document.querySelector("#output");
+        //使用var会报错，使用let则不会，let允许块级作用域
+        for (let i=0;i<buttons.length;i++){
+            buttons[i].addEventListener('click',function () {
+                p.innerText=buttons[i].innerText;
+            });
+        }
+        
+        
+        
+    </script>
+    
+</body>
+</html>
