@@ -187,12 +187,10 @@ const c = {...a , ...b}; // {a: 'a', b: 'b'}
 function mix(...mixins) {
     class Mix {
     }
-
     for (let mixin of mixins) {
         copyProperties( Mix.prototype , mixin ); // 拷贝实例属性
         copyProperties( Mix.prototype , Reflect.getPrototypeOf( mixin ) ); // 拷贝原型属性
     }
-
     return Mix;
 }
 

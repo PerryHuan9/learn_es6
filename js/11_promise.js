@@ -171,7 +171,7 @@ Promise.race([p1, p2]).then(
  Promise.resolve()
  Promise.resolve()接受一个参数值，可以是普通的值，具有then()方法的对象和Promise实例。
  正常情况下，它返回一个Promise对象，状态为fulfilled。
- 但是，当解析时发生错误时，返回的Promise对象将会置为rejected态。
+ 但是，当解析发生错误时，返回的Promise对象将会置为rejected态。
  */
 //参数为普通的值
 let p5=Promise.resolve(5);
@@ -219,12 +219,6 @@ p10.then(function (data) {
 
 
 
-
-// var a=123;
-// if(true){
-//     a="abc";
-//     let a;
-// }
 
 
 
